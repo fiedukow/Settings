@@ -64,7 +64,7 @@ extension Settings {
 			super.init(rootView: content)
 		}
 
-		public convenience init(pane: Pane<Content>) {
+		public init(pane: Pane<Content>) {
 			self.init(
 				identifier: pane.identifier,
 				title: pane.title,
