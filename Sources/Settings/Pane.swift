@@ -20,10 +20,10 @@ extension Settings {
 	SwiftUI equivalent of the `SettingsPane` protocol.
 	*/
 	public struct Pane<Content: View>: View, SettingsPaneConvertible {
-		let identifier: PaneIdentifier
-		let title: String
-		let toolbarIcon: NSImage
-		let content: Content
+		public let identifier: PaneIdentifier
+		public let title: String
+		public let toolbarIcon: NSImage
+		public let content: Content
 
 		public init(
 			identifier: PaneIdentifier,
