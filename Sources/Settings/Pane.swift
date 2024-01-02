@@ -52,7 +52,7 @@ extension Settings {
 		public let paneTitle: String
 		public let toolbarItemIcon: NSImage
 
-		init(
+		public init(
 			identifier: PaneIdentifier,
 			title: String,
 			toolbarIcon: NSImage,
@@ -75,7 +75,7 @@ extension Settings {
 
 		@available(*, unavailable)
 		@objc
-		dynamic required init?(coder: NSCoder) {
+		public dynamic required init?(coder: NSCoder) {
 			fatalError("init(coder:) has not been implemented")
 		}
 	}
