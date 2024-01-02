@@ -47,7 +47,7 @@ extension Settings {
 	/**
 	Hosting controller enabling `Settings.Pane` to be used alongside AppKit `NSViewController`'s.
 	*/
-	public class PaneHostingController<Content: View>: NSHostingController<Content>, SettingsPane {
+	public open class PaneHostingController<Content: View>: NSHostingController<Content>, SettingsPane {
 		public let paneIdentifier: PaneIdentifier
 		public let paneTitle: String
 		public let toolbarItemIcon: NSImage
