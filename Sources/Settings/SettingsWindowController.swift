@@ -128,12 +128,12 @@ extension SettingsWindowController {
 			return target
 		}
 
-		guard let activeViewController = tabViewController.activeViewController else {
-			return nil
+		if let target = NSApp.target(forAction: action, to: tabViewController.activeViewController, from: sender) as? NSResponder, target.responds(to: action) {
+			return target
 		}
 
-		if let target = NSApp.target(forAction: action, to: activeViewController, from: sender) as? NSResponder, target.responds(to: action) {
-			return target
+		guard let activeViewController = tabViewController.activeViewController else {
+			return nil
 		}
 
 		if let target = activeViewController.supplementalTarget(forAction: action, sender: sender) as? NSResponder, target.responds(to: action) {
